@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/base.css') }}">
+    <title>{{ title }} - PyBlog</title>
+</head>
+<body>
+
+
+<div class="header">
+    <h1>Welcome to PyBlog {{current_user.username}}!</h1>
+    <div class="logo">
+        <img src="https://elib.grsu.by/sites/all/themes/lib2013t3/img/logo.png">
+    </div>
+</div>
+
+<div class="topnav">
+    <a href="{{ url_for('index') }}">Home</a>
+    <a href="#">Link</a>
+    <a href="#">Link</a>
+    <a href="#">Link</a>
+    {% if current_user.is_anonymous %}
+    <a href="{{ url_for('login') }}" style="float:right">Login</a>
+    {% else %}
+    <a href="{{ url_for('logout') }}" style="float:right">Logout</a>
+    {% endif %}
+</div>
+<div class="row">
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <ul>
+        {% for message in messages %}
+        <li>{{ message }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    {% endwith %}
+    {% block content %}{% endblock %}
+    {% if current_user.is_authenticated %}
+    <div class="rightcolumn">
+        <div class="card">
+            <h2>About Me</h2>
+            <div class="fakeimg" style="height:100px;"></div>
+            <p>Student of GRSU</p>
+        </div>
+        <div class="card">
+            <h3>Popular Post</h3>
+            <div class="fakeimg"><p>Image</p></div>
+            <div class="fakeimg"><p>Image</p></div>
+            <div class="fakeimg"><p>Image</p></div>
+        </div>
+        <div class="card">
+            <h3>Follow Me</h3>
+            <p>Some text..</p>
+        </div>
+    </div>
+    {% endif %}
+</div>
+
+<div class="footer">
+    <h2>Footer</h2>
+    <h3>@Copyright Ilya Keduk GRSU_ITS-181</h3>
+</div>
+
+</body>
+</html>
