@@ -1,0 +1,41 @@
+2021-04-24 13:49:34,918 ERROR: Exception on /user/Dima [GET] [in /home/ilya-debian/PyBlog/env/lib/python3.7/site-packages/flask/app.py:1892]
+Traceback (most recent call last):
+  File "/home/ilya-debian/PyBlog/env/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ilya-debian/PyBlog/env/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ilya-debian/PyBlog/env/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ilya-debian/PyBlog/env/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ilya-debian/PyBlog/env/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ilya-debian/PyBlog/env/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ilya-debian/PyBlog/env/lib/python3.7/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/ilya-debian/PyBlog/app/routes.py", line 82, in user
+    return render_template('user.html', user=user, posts=posts)
+  File "/home/ilya-debian/PyBlog/env/lib/python3.7/site-packages/flask/templating.py", line 140, in render_template
+    ctx.app,
+  File "/home/ilya-debian/PyBlog/env/lib/python3.7/site-packages/flask/templating.py", line 120, in _render
+    rv = template.render(context)
+  File "/home/ilya-debian/PyBlog/env/lib/python3.7/site-packages/jinja2/environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "/home/ilya-debian/PyBlog/env/lib/python3.7/site-packages/jinja2/environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "/home/ilya-debian/PyBlog/env/lib/python3.7/site-packages/jinja2/_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "/home/ilya-debian/PyBlog/app/templates/user.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/home/ilya-debian/PyBlog/app/templates/base.html", line 39, in top-level template code
+    {% block content %}{% endblock %}
+  File "/home/ilya-debian/PyBlog/app/templates/user.html", line 19, in block "content"
+    {{ form.hidden_tag() }}
+  File "/home/ilya-debian/PyBlog/env/lib/python3.7/site-packages/jinja2/environment.py", line 471, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'form' is undefined
+2021-04-24 13:53:39,447 INFO: Microblog startup [in /home/ilya-debian/PyBlog/app/__init__.py:43]
+2021-04-24 13:56:31,492 INFO: Microblog startup [in /home/ilya-debian/PyBlog/app/__init__.py:43]
+2021-04-24 13:57:10,847 INFO: Microblog startup [in /home/ilya-debian/PyBlog/app/__init__.py:43]
+2021-04-24 13:59:08,048 INFO: Microblog startup [in /home/ilya-debian/PyBlog/app/__init__.py:43]
