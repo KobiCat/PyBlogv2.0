@@ -61,11 +61,38 @@ body {
     width: 100%;
     background-color: #f1f1f1;
 }
+
+.prof {
+    float: left;
+    width: 100%;
+    background-color: #f1f1f1;
+}
+
 /* Fake image */
 .fakeimg {
     background-color: #aaa;
     width: 100%;
     padding: 20px;
+}
+
+.button-casual {
+    background-color: white; /* Green */
+    border: none;
+    color: black;
+    padding: 10px 22px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border: 2px solid dodgerblue;
+    border-radius: 8px;
+}
+
+.button-casual:hover{
+    background-color: dodgerblue;
+    color: white;
 }
 
 /* Add a card effect for articles */
@@ -90,16 +117,28 @@ body {
     margin-top: 20px;
 }
 
+.alert-info{
+    padding: 20px;
+    background: rgb(246, 255, 195);
+    margin-top: 20px;
+    border-radius: 15px;
+}
+
 .footer h3{
     font-size:14px;
 }
 
-.logo{
+.grsu{
     position: absolute;
     height:60px;
     width: 60px;
     left: 65px;
-    top: 80px;
+    top: 60px;
+}
+
+.prof table {
+    border-collapse: separate;
+    border-spacing: 25px 5px;
 }
 
 .row ul{

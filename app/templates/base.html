@@ -9,7 +9,7 @@
 
 <div class="header">
     <h1>Welcome to PyBlog {{current_user.username}}!</h1>
-    <div class="logo">
+    <div class="grsu">
         <img src="https://elib.grsu.by/sites/all/themes/lib2013t3/img/logo.png">
     </div>
 </div>
@@ -29,9 +29,8 @@
 <div class="row">
     {% with messages = get_flashed_messages() %}
     {% if messages %}
-    <ul>
         {% for message in messages %}
-        <li>{{ message }}</li>
+        <div class="alert-info">{{ message }}</div>
         {% endfor %}
     </ul>
     {% endif %}
