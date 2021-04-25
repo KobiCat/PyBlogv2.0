@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="card">
+    <h1>Hi, {{ current_user.username }}!</h1>
+    <form action="" method="post" id="form-id" novalidate>
+        <p class="title">Tell people something</p>
+        {{ form.hidden_tag() }}
+        <p>
+            <input type="text" name="title" id="your-header" class="input-text" placeholder="Header" required>
+            <br>{% for error in form.title.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>
+            <input type="text" name="tag" id="your-tag" class="input-text" placeholder="Tags" required>
+            <br>{% for error in form.tag.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>
+            <textarea name="post" id="your-post" class="input-text" placeholder="Say anything" required cols="32" rows="4"></textarea>
+            <br>{% for error in form.post.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p><input type="submit" name="submit" id="post" class="button-approve" style="width: 100%;" value="Post!"></p>
+    </form>
+</div>
+{% endblock %}

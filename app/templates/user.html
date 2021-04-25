@@ -1,8 +1,8 @@
+<title>Profile - PyBlog</title>
 {% extends "base.html" %}
 
 {% block content %}
     <div class="full">
-    <hr>
     <div class="prof">
     <table>
         <tr valign="top">
@@ -18,14 +18,14 @@
                 <p>
                     <form action="{{ url_for('follow', username=user.username) }}" method="post">
                         {{ form.hidden_tag() }}
-                        {{ form.submit(value='Follow') }}
+                        <input type="submit" name="submit" id="subscribe" value="Follow" class="button-casual">
                     </form>
                 </p>
                 {% else %}
                 <p>
                     <form action="{{ url_for('unfollow', username=user.username) }}" method="post">
                         {{ form.hidden_tag() }}
-                        {{ form.submit(value='Unfollow') }}
+                        <input type="submit" name="submit" id="subscribe" value="Unfollow" class="button-warn">
                     </form>
                 </p>
                 {% endif %}
@@ -38,5 +38,11 @@
     {% for post in posts %}
         {% include '_post.html' %}
     {% endfor %}
+    {% if prev_url %}
+    <a href="{{ prev_url }}" class="button-casual">Previos posts</a>
+    {% endif %}
+    {% if next_url %}
+    <a href="{{ next_url }}" class="button-casual" style="float: right;">Next posts</a>
+    {% endif %}
     </div>
 {% endblock %}

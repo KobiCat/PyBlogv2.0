@@ -2,10 +2,11 @@
 <html>
 <head>
     <link rel="stylesheet" href="{{url_for('static', filename='styles/base.css')}}">
+    <link rel="shortcut icon" type="image/x-icon" href="{{url_for('static', filename='images/favicon.ico')}}"/>
     <title>{{ title }} - PyBlog</title>
 </head>
 <body>
-
+<div class="wrapper">
 
 <div class="header">
     <h1>Welcome to PyBlog {{current_user.username}}!</h1>
@@ -19,6 +20,7 @@
     <a href="#">Link</a>
     <a href="#">Link</a>
     <a href="#">Link</a>
+    <a href="{{ url_for('article') }}">Create</a>
     {% if current_user.is_anonymous %}
     <a href="{{ url_for('login') }}" style="float:right">Login</a>
     {% else %}
@@ -42,6 +44,6 @@
     <h2>Footer</h2>
     <h3>@Copyright Ilya Keduk GRSU_ITS-181</h3>
 </div>
-
+</div>
 </body>
 </html>

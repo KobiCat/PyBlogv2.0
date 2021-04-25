@@ -5,11 +5,22 @@
     {% for post in posts %}
         <div class="card">
             <h2>{{ post.title }}</h2>
-            <h4>{{post.author.username}}, Apr 23,2021</h5>
+            <table>
+                <tr valign="top">
+                    <td><img src="{{ post.author.avatar(36) }}"></td>
+                    <td>{{ post.author.username }}<br>Apr 23,2021</td>
+                </tr>
+            </table>
             <div class="fakeimg" style="height:200px;">Image</div>
             <p>{{post.body}}</p>
         </div>
     {% endfor %}
+    {% if prev_url %}
+    <a href="{{ prev_url }}" class="button-casual">Previous posts</a>
+    {% endif %}
+    {% if next_url %}
+    <a href="{{ next_url }}" class="button-casual" style="float: right;">Next posts</a>
+    {% endif %}
     </div>
     {% if current_user.is_authenticated %}
     <div class="rightcolumn">

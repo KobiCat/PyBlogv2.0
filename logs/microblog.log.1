@@ -1,4 +1,4 @@
-2021-04-24 13:49:34,918 ERROR: Exception on /user/Dima [GET] [in /home/ilya-debian/PyBlog/env/lib/python3.7/site-packages/flask/app.py:1892]
+2021-04-25 15:39:58,754 ERROR: Exception on /user/Dima [GET] [in /home/ilya-debian/PyBlog/env/lib/python3.7/site-packages/flask/app.py:1892]
 Traceback (most recent call last):
   File "/home/ilya-debian/PyBlog/env/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
     response = self.full_dispatch_request()
@@ -14,8 +14,8 @@ Traceback (most recent call last):
     return self.view_functions[rule.endpoint](**req.view_args)
   File "/home/ilya-debian/PyBlog/env/lib/python3.7/site-packages/flask_login/utils.py", line 272, in decorated_view
     return func(*args, **kwargs)
-  File "/home/ilya-debian/PyBlog/app/routes.py", line 82, in user
-    return render_template('user.html', user=user, posts=posts)
+  File "/home/ilya-debian/PyBlog/app/routes.py", line 79, in user
+    next_url=next_url, prev_url=prev_url)
   File "/home/ilya-debian/PyBlog/env/lib/python3.7/site-packages/flask/templating.py", line 140, in render_template
     ctx.app,
   File "/home/ilya-debian/PyBlog/env/lib/python3.7/site-packages/flask/templating.py", line 120, in _render
@@ -26,69 +26,34 @@ Traceback (most recent call last):
     reraise(*rewrite_traceback_stack(source=source))
   File "/home/ilya-debian/PyBlog/env/lib/python3.7/site-packages/jinja2/_compat.py", line 28, in reraise
     raise value.with_traceback(tb)
-  File "/home/ilya-debian/PyBlog/app/templates/user.html", line 1, in top-level template code
+  File "/home/ilya-debian/PyBlog/app/templates/user.html", line 2, in top-level template code
     {% extends "base.html" %}
   File "/home/ilya-debian/PyBlog/app/templates/base.html", line 39, in top-level template code
     {% block content %}{% endblock %}
-  File "/home/ilya-debian/PyBlog/app/templates/user.html", line 19, in block "content"
+  File "/home/ilya-debian/PyBlog/app/templates/user.html", line 21, in block "content"
     {{ form.hidden_tag() }}
   File "/home/ilya-debian/PyBlog/env/lib/python3.7/site-packages/jinja2/environment.py", line 471, in getattr
     return getattr(obj, attribute)
 jinja2.exceptions.UndefinedError: 'form' is undefined
-2021-04-24 13:53:39,447 INFO: Microblog startup [in /home/ilya-debian/PyBlog/app/__init__.py:43]
-2021-04-24 13:56:31,492 INFO: Microblog startup [in /home/ilya-debian/PyBlog/app/__init__.py:43]
-2021-04-24 13:57:10,847 INFO: Microblog startup [in /home/ilya-debian/PyBlog/app/__init__.py:43]
-2021-04-24 13:59:08,048 INFO: Microblog startup [in /home/ilya-debian/PyBlog/app/__init__.py:43]
-2021-04-24 14:13:13,830 INFO: Microblog startup [in /home/ilya-debian/PyBlog/app/__init__.py:43]
-2021-04-24 14:15:55,625 INFO: Microblog startup [in /home/ilya-debian/PyBlog/app/__init__.py:43]
-2021-04-24 14:21:43,187 INFO: Microblog startup [in /home/ilya-debian/PyBlog/app/__init__.py:43]
-2021-04-24 14:22:05,203 INFO: Microblog startup [in /home/ilya-debian/PyBlog/app/__init__.py:43]
-2021-04-24 14:22:34,391 INFO: Microblog startup [in /home/ilya-debian/PyBlog/app/__init__.py:43]
-2021-04-24 14:22:55,662 INFO: Microblog startup [in /home/ilya-debian/PyBlog/app/__init__.py:43]
-2021-04-24 14:23:09,921 INFO: Microblog startup [in /home/ilya-debian/PyBlog/app/__init__.py:43]
-2021-04-24 14:27:51,382 INFO: Microblog startup [in /home/ilya-debian/PyBlog/app/__init__.py:43]
-2021-04-24 14:30:02,611 INFO: Microblog startup [in /home/ilya-debian/PyBlog/app/__init__.py:43]
-2021-04-24 14:31:27,470 INFO: Microblog startup [in /home/ilya-debian/PyBlog/app/__init__.py:43]
-2021-04-24 14:40:39,443 INFO: Microblog startup [in /home/ilya-debian/PyBlog/app/__init__.py:43]
-2021-04-24 14:41:28,452 INFO: Microblog startup [in /home/ilya-debian/PyBlog/app/__init__.py:43]
-2021-04-24 14:41:34,522 INFO: Microblog startup [in /home/ilya-debian/PyBlog/app/__init__.py:43]
-2021-04-24 15:09:46,550 INFO: Microblog startup [in /home/ilya-debian/PyBlog/app/__init__.py:43]
-2021-04-24 15:14:26,903 INFO: Microblog startup [in /home/ilya-debian/PyBlog/app/__init__.py:43]
-2021-04-24 15:17:26,114 INFO: Microblog startup [in /home/ilya-debian/PyBlog/app/__init__.py:43]
-2021-04-24 15:40:11,107 INFO: Microblog startup [in /home/ilya-debian/PyBlog/app/__init__.py:43]
-2021-04-24 15:41:23,155 INFO: Microblog startup [in /home/ilya-debian/PyBlog/app/__init__.py:43]
-2021-04-24 15:42:00,822 INFO: Microblog startup [in /home/ilya-debian/PyBlog/app/__init__.py:43]
-2021-04-24 16:09:03,607 INFO: Microblog startup [in /home/ilya-debian/PyBlog/app/__init__.py:43]
-2021-04-24 16:09:59,095 INFO: Microblog startup [in /home/ilya-debian/PyBlog/app/__init__.py:43]
-2021-04-24 16:10:22,721 INFO: Microblog startup [in /home/ilya-debian/PyBlog/app/__init__.py:43]
-2021-04-24 16:10:56,455 INFO: Microblog startup [in /home/ilya-debian/PyBlog/app/__init__.py:43]
-2021-04-24 16:10:58,483 ERROR: Exception on /login2.html [GET] [in /home/ilya-debian/PyBlog/env/lib/python3.7/site-packages/flask/app.py:1892]
-Traceback (most recent call last):
-  File "/home/ilya-debian/PyBlog/env/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/home/ilya-debian/PyBlog/env/lib/python3.7/site-packages/flask/app.py", line 1926, in dispatch_request
-    self.raise_routing_exception(req)
-  File "/home/ilya-debian/PyBlog/env/lib/python3.7/site-packages/flask/app.py", line 1908, in raise_routing_exception
-    raise request.routing_exception
-  File "/home/ilya-debian/PyBlog/env/lib/python3.7/site-packages/flask/ctx.py", line 350, in match_request
-    result = self.url_adapter.match(return_rule=True)
-  File "/home/ilya-debian/PyBlog/env/lib/python3.7/site-packages/werkzeug/routing.py", line 1945, in match
-    raise NotFound()
-werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
-
-During handling of the above exception, another exception occurred:
-
+2021-04-25 15:40:06,833 INFO: Microblog startup [in /home/ilya-debian/PyBlog/app/__init__.py:45]
+2021-04-25 15:40:08,838 ERROR: Exception on /user/Dima [GET] [in /home/ilya-debian/PyBlog/env/lib/python3.7/site-packages/flask/app.py:1892]
 Traceback (most recent call last):
   File "/home/ilya-debian/PyBlog/env/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
     response = self.full_dispatch_request()
   File "/home/ilya-debian/PyBlog/env/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
     rv = self.handle_user_exception(e)
-  File "/home/ilya-debian/PyBlog/env/lib/python3.7/site-packages/flask/app.py", line 1816, in handle_user_exception
-    return self.handle_http_exception(e)
-  File "/home/ilya-debian/PyBlog/env/lib/python3.7/site-packages/flask/app.py", line 1744, in handle_http_exception
-    return handler(e)
-  File "/home/ilya-debian/PyBlog/app/errors.py", line 7, in not_found_error
-    return render_template('404.html'), 404
+  File "/home/ilya-debian/PyBlog/env/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ilya-debian/PyBlog/env/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ilya-debian/PyBlog/env/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ilya-debian/PyBlog/env/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ilya-debian/PyBlog/env/lib/python3.7/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/ilya-debian/PyBlog/app/routes.py", line 79, in user
+    next_url=next_url, prev_url=prev_url)
   File "/home/ilya-debian/PyBlog/env/lib/python3.7/site-packages/flask/templating.py", line 140, in render_template
     ctx.app,
   File "/home/ilya-debian/PyBlog/env/lib/python3.7/site-packages/flask/templating.py", line 120, in _render
@@ -99,18 +64,62 @@ Traceback (most recent call last):
     reraise(*rewrite_traceback_stack(source=source))
   File "/home/ilya-debian/PyBlog/env/lib/python3.7/site-packages/jinja2/_compat.py", line 28, in reraise
     raise value.with_traceback(tb)
-  File "/home/ilya-debian/PyBlog/app/templates/404.html", line 1, in top-level template code
+  File "/home/ilya-debian/PyBlog/app/templates/user.html", line 2, in top-level template code
     {% extends "base.html" %}
-  File "/home/ilya-debian/PyBlog/app/templates/base.html", line 21, in top-level template code
-    <a href="{{ url_for('login2') }}">Log test</a>
-  File "/home/ilya-debian/PyBlog/env/lib/python3.7/site-packages/flask/helpers.py", line 370, in url_for
-    return appctx.app.handle_url_build_error(error, endpoint, values)
-  File "/home/ilya-debian/PyBlog/env/lib/python3.7/site-packages/flask/app.py", line 2216, in handle_url_build_error
-    reraise(exc_type, exc_value, tb)
-  File "/home/ilya-debian/PyBlog/env/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
-    raise value
-  File "/home/ilya-debian/PyBlog/env/lib/python3.7/site-packages/flask/helpers.py", line 358, in url_for
-    endpoint, values, method=method, force_external=external
-  File "/home/ilya-debian/PyBlog/env/lib/python3.7/site-packages/werkzeug/routing.py", line 2179, in build
-    raise BuildError(endpoint, values, method, self)
-werkzeug.routing.BuildError: Could not build url for endpoint 'login2'. Did you mean 'login' instead?
+  File "/home/ilya-debian/PyBlog/app/templates/base.html", line 39, in top-level template code
+    {% block content %}{% endblock %}
+  File "/home/ilya-debian/PyBlog/app/templates/user.html", line 21, in block "content"
+    {{ form.hidden_tag() }}
+  File "/home/ilya-debian/PyBlog/env/lib/python3.7/site-packages/jinja2/environment.py", line 471, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'form' is undefined
+2021-04-25 15:41:14,788 INFO: Microblog startup [in /home/ilya-debian/PyBlog/app/__init__.py:45]
+2021-04-25 15:43:26,458 INFO: Microblog startup [in /home/ilya-debian/PyBlog/app/__init__.py:45]
+2021-04-25 15:44:24,389 INFO: Microblog startup [in /home/ilya-debian/PyBlog/app/__init__.py:45]
+2021-04-25 15:46:47,644 INFO: Microblog startup [in /home/ilya-debian/PyBlog/app/__init__.py:45]
+2021-04-25 15:47:41,708 INFO: Microblog startup [in /home/ilya-debian/PyBlog/app/__init__.py:45]
+2021-04-25 15:48:49,514 INFO: Microblog startup [in /home/ilya-debian/PyBlog/app/__init__.py:45]
+2021-04-25 15:56:34,418 INFO: Microblog startup [in /home/ilya-debian/PyBlog/app/__init__.py:45]
+2021-04-25 15:57:16,107 INFO: Microblog startup [in /home/ilya-debian/PyBlog/app/__init__.py:45]
+2021-04-25 15:59:24,749 INFO: Microblog startup [in /home/ilya-debian/PyBlog/app/__init__.py:45]
+2021-04-25 16:01:26,334 INFO: Microblog startup [in /home/ilya-debian/PyBlog/app/__init__.py:45]
+2021-04-25 16:05:00,640 INFO: Microblog startup [in /home/ilya-debian/PyBlog/app/__init__.py:45]
+2021-04-25 16:07:34,906 INFO: Microblog startup [in /home/ilya-debian/PyBlog/app/__init__.py:45]
+2021-04-25 16:10:31,911 INFO: Microblog startup [in /home/ilya-debian/PyBlog/app/__init__.py:45]
+2021-04-25 16:11:44,584 INFO: Microblog startup [in /home/ilya-debian/PyBlog/app/__init__.py:45]
+2021-04-25 16:12:43,450 INFO: Microblog startup [in /home/ilya-debian/PyBlog/app/__init__.py:45]
+2021-04-25 16:13:10,015 INFO: Microblog startup [in /home/ilya-debian/PyBlog/app/__init__.py:45]
+2021-04-25 16:14:42,662 INFO: Microblog startup [in /home/ilya-debian/PyBlog/app/__init__.py:45]
+2021-04-25 16:17:11,631 INFO: Microblog startup [in /home/ilya-debian/PyBlog/app/__init__.py:45]
+2021-04-25 16:21:28,788 INFO: Microblog startup [in /home/ilya-debian/PyBlog/app/__init__.py:45]
+2021-04-25 16:22:58,041 INFO: Microblog startup [in /home/ilya-debian/PyBlog/app/__init__.py:45]
+2021-04-25 16:24:38,560 INFO: Microblog startup [in /home/ilya-debian/PyBlog/app/__init__.py:45]
+2021-04-25 16:26:13,292 INFO: Microblog startup [in /home/ilya-debian/PyBlog/app/__init__.py:45]
+2021-04-25 16:27:32,195 INFO: Microblog startup [in /home/ilya-debian/PyBlog/app/__init__.py:45]
+2021-04-25 16:28:00,318 INFO: Microblog startup [in /home/ilya-debian/PyBlog/app/__init__.py:45]
+2021-04-25 16:34:25,676 INFO: Microblog startup [in /home/ilya-debian/PyBlog/app/__init__.py:45]
+2021-04-25 16:36:11,935 INFO: Microblog startup [in /home/ilya-debian/PyBlog/app/__init__.py:45]
+2021-04-25 16:40:32,638 INFO: Microblog startup [in /home/ilya-debian/PyBlog/app/__init__.py:45]
+2021-04-25 16:41:59,175 INFO: Microblog startup [in /home/ilya-debian/PyBlog/app/__init__.py:45]
+2021-04-25 16:45:28,958 INFO: Microblog startup [in /home/ilya-debian/PyBlog/app/__init__.py:45]
+2021-04-25 16:46:05,851 INFO: Microblog startup [in /home/ilya-debian/PyBlog/app/__init__.py:45]
+2021-04-25 16:47:02,999 INFO: Microblog startup [in /home/ilya-debian/PyBlog/app/__init__.py:45]
+2021-04-25 16:49:14,679 INFO: Microblog startup [in /home/ilya-debian/PyBlog/app/__init__.py:45]
+2021-04-25 16:59:59,519 INFO: Microblog startup [in /home/ilya-debian/PyBlog/app/__init__.py:45]
+2021-04-25 17:01:23,824 INFO: Microblog startup [in /home/ilya-debian/PyBlog/app/__init__.py:45]
+2021-04-25 17:02:17,514 INFO: Microblog startup [in /home/ilya-debian/PyBlog/app/__init__.py:45]
+2021-04-25 17:07:49,904 INFO: Microblog startup [in /home/ilya-debian/PyBlog/app/__init__.py:45]
+2021-04-25 17:08:40,534 INFO: Microblog startup [in /home/ilya-debian/PyBlog/app/__init__.py:45]
+2021-04-25 17:10:24,167 INFO: Microblog startup [in /home/ilya-debian/PyBlog/app/__init__.py:45]
+2021-04-25 17:16:19,654 INFO: Microblog startup [in /home/ilya-debian/PyBlog/app/__init__.py:45]
+2021-04-25 17:19:07,287 INFO: Microblog startup [in /home/ilya-debian/PyBlog/app/__init__.py:45]
+2021-04-25 17:24:13,307 INFO: Microblog startup [in /home/ilya-debian/PyBlog/app/__init__.py:45]
+2021-04-25 17:31:23,970 INFO: Microblog startup [in /home/ilya-debian/PyBlog/app/__init__.py:45]
+2021-04-25 17:32:05,993 INFO: Microblog startup [in /home/ilya-debian/PyBlog/app/__init__.py:45]
+2021-04-25 17:34:22,195 INFO: Microblog startup [in /home/ilya-debian/PyBlog/app/__init__.py:45]
+2021-04-25 17:34:36,793 INFO: Microblog startup [in /home/ilya-debian/PyBlog/app/__init__.py:45]
+2021-04-25 17:44:38,148 INFO: Microblog startup [in /home/ilya-debian/PyBlog/app/__init__.py:45]
+2021-04-25 17:46:39,113 INFO: Microblog startup [in /home/ilya-debian/PyBlog/app/__init__.py:45]
+2021-04-25 17:47:05,675 INFO: Microblog startup [in /home/ilya-debian/PyBlog/app/__init__.py:45]
+2021-04-25 17:47:30,922 INFO: Microblog startup [in /home/ilya-debian/PyBlog/app/__init__.py:45]
+2021-04-25 17:50:55,954 INFO: Microblog startup [in /home/ilya-debian/PyBlog/app/__init__.py:45]
